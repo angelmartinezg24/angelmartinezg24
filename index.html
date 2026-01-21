@@ -1,198 +1,257 @@
 <!DOCTYPE HTML>
 <html lang="es">
 <head>
-    <title>EVOLUCIÓN HUMANA | El Gran Viaje</title>
+    <title>ANTROPOGÉNESIS: La Guía Definitiva | Evolución Humana</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     
     <style>
-        /* CSS UNIFICADO */
+        /* CONFIGURACIÓN PRO: ESTILO DARK ACADEMIA */
+        :root {
+            --oro: #ffcc00;
+            --fondo: #0a0a0a;
+            --texto: #dcdcdc;
+            --acento: #333;
+        }
+
         body {
-            background-color: #0f0f0f;
-            color: #e0e0e0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--fondo);
+            color: var(--texto);
+            font-family: 'Garamond', serif; /* Estilo más académico */
             margin: 0;
-            line-height: 1.6;
-            overflow-x: hidden;
-            /* EFECTO EXPLOSIÓN AL CARGAR */
+            line-height: 1.8;
             opacity: 0;
-            animation: explosionEntrada 0.6s cubic-bezier(0.17, 0.67, 0.83, 0.67) forwards;
+            animation: explosionRapida 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
         }
 
-        @keyframes explosionEntrada {
-            0% { opacity: 0; transform: scale(0.5); filter: blur(20px); }
-            70% { opacity: 1; transform: scale(1.05); filter: blur(0px); }
-            100% { opacity: 1; transform: scale(1); }
+        @keyframes explosionRapida {
+            0% { opacity: 0; transform: scale(1.2); filter: brightness(3); }
+            100% { opacity: 1; transform: scale(1); filter: brightness(1); }
         }
 
-        /* TÍTULO WAPO */
-        .header-principal {
+        /* HEADER IMPACTANTE */
+        header {
             height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.5)), 
                         url('https://images.unsplash.com');
             background-size: cover;
             background-attachment: fixed;
             text-align: center;
-            border-bottom: 4px solid #ffcc00;
         }
 
-        .header-principal h1 {
-            font-size: clamp(3rem, 10vw, 6rem);
+        header h1 {
+            font-size: clamp(4rem, 12vw, 8rem);
+            color: var(--oro);
             margin: 0;
-            color: #ffcc00;
-            text-shadow: 5px 5px 15px rgba(0,0,0,0.8);
-            letter-spacing: -2px;
-            font-weight: 900;
-        }
-
-        .header-principal p {
-            font-size: 1.5rem;
-            color: #fff;
             text-transform: uppercase;
-            letter-spacing: 5px;
+            letter-spacing: -5px;
+            line-height: 0.9;
         }
 
-        /* SECCIONES LARGAS */
+        .subtitle {
+            font-size: 1.5rem;
+            letter-spacing: 8px;
+            color: white;
+            border-top: 2px solid var(--oro);
+            padding-top: 10px;
+        }
+
+        /* CUERPO DE LA PÁGINA - SECCIONES LARGAS */
+        .contenedor {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 50px 20px;
+        }
+
         section {
-            padding: 100px 10%;
-            min-height: 80vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            border-bottom: 1px solid #222;
+            padding: 100px 0;
+            border-bottom: 1px solid var(--acento);
         }
 
-        h2 { font-size: 3rem; color: #ffcc00; margin-bottom: 30px; }
-        
-        .foto-historia {
-            width: 100%;
-            max-width: 800px;
-            height: 400px;
-            object-fit: cover;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-            margin-bottom: 30px;
-            transition: transform 0.3s;
+        h2 {
+            font-size: 3.5rem;
+            color: var(--oro);
+            margin-bottom: 20px;
+            border-left: 5px solid var(--oro);
+            padding-left: 20px;
         }
 
-        .foto-historia:hover { transform: scale(1.02); }
-
-        /* DESPLEGABLES (ACORDEÓN) */
-        .boton-desplegable {
-            background-color: #222;
-            color: #ffcc00;
-            cursor: pointer;
-            padding: 20px;
-            width: 100%;
-            max-width: 800px;
-            border: 2px solid #333;
-            text-align: left;
-            font-size: 1.2rem;
+        .meta-dato {
+            display: inline-block;
+            background: var(--oro);
+            color: black;
+            padding: 2px 15px;
             font-weight: bold;
-            transition: 0.3s;
-            border-radius: 8px;
-            margin-top: 10px;
+            border-radius: 20px;
+            margin-bottom: 20px;
         }
 
-        .boton-desplegable:hover { background-color: #333; border-color: #ffcc00; }
+        img {
+            width: 100%;
+            border-radius: 10px;
+            filter: grayscale(30%) sepia(20%);
+            transition: 0.5s;
+        }
 
-        .contenido-desplegable {
+        img:hover { filter: grayscale(0%); transform: scale(1.01); }
+
+        /* DESPLEGABLES TÉCNICOS */
+        .acordeon {
+            background: #151515;
+            color: var(--oro);
+            cursor: pointer;
+            padding: 25px;
+            width: 100%;
+            border: 1px solid var(--acento);
+            text-align: left;
+            font-size: 1.4rem;
+            font-weight: bold;
+            margin-top: 30px;
+            transition: 0.3s;
+        }
+
+        .acordeon:hover { background: #222; }
+
+        .panel {
             max-height: 0;
             overflow: hidden;
-            transition: max-height 0.4s ease-out;
-            background-color: #1a1a1a;
-            width: 100%;
-            max-width: 800px;
-            border-radius: 0 0 8px 8px;
+            transition: max-height 0.5s ease-in-out;
+            background: #0d0d0d;
         }
 
-        .texto-interno {
-            padding: 25px;
+        .info-tecnica {
+            padding: 30px;
+            border-left: 2px solid var(--oro);
             font-size: 1.1rem;
-            color: #ccc;
-            border-left: 3px solid #ffcc00;
         }
 
-        footer {
-            padding: 100px;
-            text-align: center;
-            background: #000;
-            color: #555;
-        }
+        footer { text-align: center; padding: 100px; color: #444; }
     </style>
 </head>
 <body>
 
-    <!-- PORTADA -->
-    <header class="header-principal">
-        <h1>EVOLUCIÓN</h1>
-        <p>El origen de nuestra especie</p>
+    <header>
+        <h1>HOMINIZACIÓN</h1>
+        <p class="subtitle">EL ASCENSO DE LA HUMANIDAD</p>
     </header>
 
-    <!-- ETAPA 1 -->
-    <section>
-        <h2>Australopithecus</h2>
-        <img src="https://images.unsplash.com" class="foto-historia" alt="Antigüedad">
-        <p style="max-width: 800px; text-align: center; font-size: 1.3rem;">Nuestros ancestros que vivieron hace 4 millones de años en África. La transición definitiva hacia el bipedismo.</p>
-        
-        <button class="boton-desplegable">✚ Ver detalles arqueológicos</button>
-        <div class="contenido-desplegable">
-            <div class="texto-interno">
-                El ejemplar más famoso es Lucy. Su esqueleto reveló que poseían piernas para caminar pero brazos largos para trepar. Su cerebro era apenas del tamaño de un chimpancé actual, demostrando que primero caminamos y luego pensamos.
-            </div>
-        </div>
-    </section>
+    <div class="contenedor">
 
-    <!-- ETAPA 2 -->
-    <section style="background-color: #151515;">
-        <h2>Homo Erectus</h2>
-        <img src="https://images.unsplash.com" class="foto-historia" alt="Fuego">
-        <p style="max-width: 800px; text-align: center; font-size: 1.3rem;">El primer gran explorador. Dominó el fuego y salió de África para colonizar Asia y Europa.</p>
-        
-        <button class="boton-desplegable">✚ Ver detalles del dominio del fuego</button>
-        <div class="contenido-desplegable">
-            <div class="texto-interno">
-                El dominio del fuego hace 1.5 millones de años permitió cocinar proteínas, lo que disparó el crecimiento del cerebro. Desarrollaron herramientas de piedra mucho más complejas llamadas bifaces.
+        <!-- ETAPA 1 -->
+        <section>
+            <span class="meta-dato">7 - 4 Millones de años</span>
+            <h2>Los Orígenes: Pre-Australopitecinos</h2>
+            <img src="https://images.unsplash.com" alt="Evolución">
+            <p>Antes de que el linaje humano se separara definitivamente de los chimpancés, existieron especies como <i>Sahelanthropus tchadensis</i> y <i>Orrorin tugenensis</i>. Estos fueron los primeros en experimentar con la postura erguida en los densos bosques de África central.</p>
+            
+            <button class="acordeon">✚ Análisis Anatómico y Hallazgos</button>
+            <div class="panel">
+                <div class="info-tecnica">
+                    <strong>Sahelanthropus (Toumaï):</strong> Presenta un foramen magnum (orificio en la base del cráneo) desplazado hacia adelante, indicando bipedismo temprano. Su capacidad craneal era de 350cm³, similar a la de un simio actual. El hallazgo en el desierto de Djurab sugiere que la evolución no ocurrió solo en el Gran Valle del Rift, sino en todo el continente.
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- ETAPA 3 -->
-    <section>
-        <h2>Neandertal & Sapiens</h2>
-        <img src="https://images.unsplash.com" class="foto-historia" alt="Arte">
-        <p style="max-width: 800px; text-align: center; font-size: 1.3rem;">La cúspide del pensamiento simbólico, el arte rupestre y la conciencia de la muerte.</p>
-        
-        <button class="boton-desplegable">✚ Ver detalles de la revolución cognitiva</button>
-        <div class="contenido-desplegable">
-            <div class="texto-interno">
-                Hace 70.000 años, el Homo Sapiens experimentó una mutación que permitió el lenguaje complejo. Esto nos permitió cooperar en grupos grandes, crear mitos, religiones y eventualmente, la ciencia moderna.
+        <!-- ETAPA 2 -->
+        <section>
+            <span class="meta-dato">4 - 2 Millones de años</span>
+            <h2>Australopithecus: Los Pioneros del Bipedismo</h2>
+            <img src="https://images.unsplash.com" alt="África">
+            <p>El género Australopithecus marca el éxito de la marcha bípeda. Especies como <i>A. afarensis</i> vivieron en un entorno cambiante entre selvas y sabanas, lo que los obligó a adaptarse para recorrer largas distancias.</p>
+            
+            <button class="acordeon">✚ Evidencias de Lucy y las Huellas de Laetoli</button>
+            <div class="panel">
+                <div class="info-tecnica">
+                    <strong>Lucy (AL 288-1):</strong> Descubierta en 1974, reveló una pelvis ancha y rodillas convergentes, características puramente humanas para caminar. 
+                    <br><br><strong>Huellas de Laetoli:</strong> Impresiones en ceniza volcánica que muestran un pie con arco longitudinal y dedo gordo no oponible, confirmando una marcha idéntica a la nuestra hace 3.6 millones de años.
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <!-- ETAPA 3 -->
+        <section>
+            <span class="meta-dato">2.5 - 1.5 Millones de años</span>
+            <h2>Homo Habilis: La Revolución Tecnológica</h2>
+            <img src="https://images.unsplash.com" alt="Herramientas">
+            <p>Se considera el primer miembro del género <i>Homo</i>. Con él aparece la cultura lítica (herramientas de piedra). Este cambio tecnológico permitió el acceso a grasas animales, esenciales para nutrir un cerebro en crecimiento.</p>
+            
+            <button class="acordeon">✚ La Dieta y el Desarrollo Encefálico</button>
+            <div class="panel">
+                <div class="info-tecnica">
+                    <strong>Cultura Olduvayense:</strong> Cantos rodados tallados para obtener bordes cortantes. El Homo Habilis aumentó su volumen cerebral a 650cm³. Al consumir carne y médula ósea, el sistema digestivo se acortó y el cerebro (un órgano caro energéticamente) pudo expandirse. Esto se conoce como la "Hipótesis del tejido costoso".
+                </div>
+            </div>
+        </section>
+
+        <!-- ETAPA 4 -->
+        <section>
+            <span class="meta-dato">1.9 Millones - 140,000 años</span>
+            <h2>Homo Erectus: La Conquista del Mundo</h2>
+            <img src="https://images.unsplash.com" alt="Fuego">
+            <p>El <i>Homo Erectus</i> fue el primer homínido con proporciones corporales modernas. Fue el primer gran migrante, extendiéndose por todo el Viejo Mundo, desde Sudáfrica hasta la isla de Java.</p>
+            
+            <button class="acordeon">✚ El Dominio del Fuego y Migración Global</button>
+            <div class="panel">
+                <div class="info-tecnica">
+                    <strong>Control del Fuego:</strong> Evidencias en la cueva de Wonderwerk sugieren el uso del fuego hace 1 millón de años. Esto transformó la estructura social (reuniones alrededor de la hoguera) y mejoró la nutrición mediante la cocción.
+                    <br><br><strong>Homo Ergaster:</strong> La variante africana, responsable de la tecnología Achelense (hachas de mano simétricas), demostrando una planificación mental abstracta avanzada.
+                </div>
+            </div>
+        </section>
+
+        <!-- ETAPA 5 -->
+        <section>
+            <span class="meta-dato">400,000 - 40,000 años</span>
+            <h2>Homo Neandertal: Los Señores del Hielo</h2>
+            <img src="https://images.unsplash.com" alt="Nieve">
+            <p>Nuestros parientes más cercanos. Los neandertales estaban adaptados físicamente al frío extremo de la Europa glacial. Poseían una cultura compleja, lenguaje y cuidaban de sus enfermos.</p>
+            
+            <button class="acordeon">✚ Genética y Pensamiento Simbólico</button>
+            <div class="panel">
+                <div class="info-tecnica">
+                    <strong>Hibridación:</strong> El análisis del ADN antiguo demuestra que los humanos modernos fuera de África conservan entre un 1% y un 4% de genes neandertales. 
+                    <br><br><strong>Ritos Funerarios:</strong> Hallazgos como en la cueva de Shanidar (Irak) muestran que enterraban a sus muertos con flores, lo que indica una conciencia de la trascendencia y un mundo simbólico desarrollado.
+                </div>
+            </div>
+        </section>
+
+        <!-- ETAPA FINAL -->
+        <section>
+            <span class="meta-dato">300,000 años - Presente</span>
+            <h2>Homo Sapiens: El Simio Simbólico</h2>
+            <img src="https://images.unsplash.com" alt="Arte">
+            <p>Surgidos en África (Jebel Irhoud, Marruecos), los humanos modernos conquistaron el planeta no por su fuerza, sino por su capacidad de imaginar. La "Revolución Cognitiva" nos permitió cooperar de forma masiva.</p>
+            
+            <button class="acordeon">✚ La Revolución de la Mente</button>
+            <div class="panel">
+                <div class="info-tecnica">
+                    <strong>Cultura Material Superior:</strong> Desarrollamos el arte rupestre (Altamira, Lascaux), la música (flautas de hueso) y el pensamiento abstracto. Hace unos 10,000 años, la transición al Neolítico y la agricultura marcó el fin de la evolución biológica como motor principal, dando paso a la evolución cultural y tecnológica acelerada.
+                </div>
+            </div>
+        </section>
+
+    </div>
 
     <footer>
-        <p>Desarrollado para el proyecto de Antropología 2026</p>
+        <p>&copy; 2026 Archivos de la Humanidad | Proyecto de Antropología Avanzada</p>
     </footer>
 
-    <!-- SCRIPT PARA QUE FUNCIONEN LOS DESPLEGABLES -->
     <script>
-        const botones = document.querySelectorAll(".boton-desplegable");
+        // LÓGICA DE LOS DESPLEGABLES
+        const botones = document.querySelectorAll(".acordeon");
         
-        botones.forEach(boton => {
-            boton.addEventListener("click", function() {
+        botones.forEach(btn => {
+            btn.addEventListener("click", function() {
                 this.classList.toggle("active");
                 const panel = this.nextElementSibling;
                 if (panel.style.maxHeight) {
                     panel.style.maxHeight = null;
-                    this.textContent = "✚ Ver más detalles";
                 } else {
                     panel.style.maxHeight = panel.scrollHeight + "px";
-                    this.textContent = "➖ Cerrar detalles";
                 }
             });
         });
@@ -200,4 +259,3 @@
 
 </body>
 </html>
-
