@@ -1,71 +1,202 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="es">
 <head>
-    <title>Evolución del Ser Humano</title>
+    <title>EVOLUCIÓN HUMANA | El Gran Viaje</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <!-- Estilos base inspirados en plantillas de HTML5 UP -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net">
+    
     <style>
-        body { background-color: #1d1d1d; color: #fff; font-family: 'Arial', sans-serif; margin: 0; }
-        section { min-height: 100vh; padding: 100px 20px; display: flex; flex-direction: column; justify-content: center; align-items: center; border-bottom: 1px solid #333; }
-        h1 { font-size: 4rem; color: #ffcc00; text-transform: uppercase; }
-        h2 { font-size: 2.5rem; color: #ffa500; }
-        p { max-width: 800px; line-height: 1.8; font-size: 1.2rem; text-align: justify; }
-        .parallax { background-attachment: fixed; background-position: center; background-repeat: no-repeat; background-size: cover; width: 100%; }
-        /* Efecto de scroll infinito visual */
-        footer { padding: 50px; text-align: center; background: #000; }
+        /* CSS UNIFICADO */
+        body {
+            background-color: #0f0f0f;
+            color: #e0e0e0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            line-height: 1.6;
+            overflow-x: hidden;
+            /* EFECTO EXPLOSIÓN AL CARGAR */
+            opacity: 0;
+            animation: explosionEntrada 0.6s cubic-bezier(0.17, 0.67, 0.83, 0.67) forwards;
+        }
+
+        @keyframes explosionEntrada {
+            0% { opacity: 0; transform: scale(0.5); filter: blur(20px); }
+            70% { opacity: 1; transform: scale(1.05); filter: blur(0px); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+
+        /* TÍTULO WAPO */
+        .header-principal {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                        url('https://images.unsplash.com');
+            background-size: cover;
+            background-attachment: fixed;
+            text-align: center;
+            border-bottom: 4px solid #ffcc00;
+        }
+
+        .header-principal h1 {
+            font-size: clamp(3rem, 10vw, 6rem);
+            margin: 0;
+            color: #ffcc00;
+            text-shadow: 5px 5px 15px rgba(0,0,0,0.8);
+            letter-spacing: -2px;
+            font-weight: 900;
+        }
+
+        .header-principal p {
+            font-size: 1.5rem;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+        }
+
+        /* SECCIONES LARGAS */
+        section {
+            padding: 100px 10%;
+            min-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-bottom: 1px solid #222;
+        }
+
+        h2 { font-size: 3rem; color: #ffcc00; margin-bottom: 30px; }
+        
+        .foto-historia {
+            width: 100%;
+            max-width: 800px;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            margin-bottom: 30px;
+            transition: transform 0.3s;
+        }
+
+        .foto-historia:hover { transform: scale(1.02); }
+
+        /* DESPLEGABLES (ACORDEÓN) */
+        .boton-desplegable {
+            background-color: #222;
+            color: #ffcc00;
+            cursor: pointer;
+            padding: 20px;
+            width: 100%;
+            max-width: 800px;
+            border: 2px solid #333;
+            text-align: left;
+            font-size: 1.2rem;
+            font-weight: bold;
+            transition: 0.3s;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+
+        .boton-desplegable:hover { background-color: #333; border-color: #ffcc00; }
+
+        .contenido-desplegable {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-out;
+            background-color: #1a1a1a;
+            width: 100%;
+            max-width: 800px;
+            border-radius: 0 0 8px 8px;
+        }
+
+        .texto-interno {
+            padding: 25px;
+            font-size: 1.1rem;
+            color: #ccc;
+            border-left: 3px solid #ffcc00;
+        }
+
+        footer {
+            padding: 100px;
+            text-align: center;
+            background: #000;
+            color: #555;
+        }
     </style>
 </head>
 <body>
 
-    <!-- Sección 1: Introducción -->
-    <section id="inicio">
-        <h1>Evolución Humana</h1>
-        <p>El proceso de hominización es el viaje de millones de años que dio lugar al Homo sapiens. Desliza para explorar nuestra historia.</p>
-        <span>↓ Desliza para comenzar el viaje ↓</span>
+    <!-- PORTADA -->
+    <header class="header-principal">
+        <h1>EVOLUCIÓN</h1>
+        <p>El origen de nuestra especie</p>
+    </header>
+
+    <!-- ETAPA 1 -->
+    <section>
+        <h2>Australopithecus</h2>
+        <img src="https://images.unsplash.com" class="foto-historia" alt="Antigüedad">
+        <p style="max-width: 800px; text-align: center; font-size: 1.3rem;">Nuestros ancestros que vivieron hace 4 millones de años en África. La transición definitiva hacia el bipedismo.</p>
+        
+        <button class="boton-desplegable">✚ Ver detalles arqueológicos</button>
+        <div class="contenido-desplegable">
+            <div class="texto-interno">
+                El ejemplar más famoso es Lucy. Su esqueleto reveló que poseían piernas para caminar pero brazos largos para trepar. Su cerebro era apenas del tamaño de un chimpancé actual, demostrando que primero caminamos y luego pensamos.
+            </div>
+        </div>
     </section>
 
-    <!-- Sección 2: Australopithecus -->
-    <section id="australopithecus" style="background: #2a2a2a;">
-        <h2>1. Australopithecus</h2>
-        <p>Vivieron en África hace unos 4 millones de años. Fue el primer grupo de homínidos en caminar de forma bípeda, aunque aún conservaban rasgos simiescos y capacidad para trepar árboles. La famosa "Lucy" pertenece a esta etapa.</p>
+    <!-- ETAPA 2 -->
+    <section style="background-color: #151515;">
+        <h2>Homo Erectus</h2>
+        <img src="https://images.unsplash.com" class="foto-historia" alt="Fuego">
+        <p style="max-width: 800px; text-align: center; font-size: 1.3rem;">El primer gran explorador. Dominó el fuego y salió de África para colonizar Asia y Europa.</p>
+        
+        <button class="boton-desplegable">✚ Ver detalles del dominio del fuego</button>
+        <div class="contenido-desplegable">
+            <div class="texto-interno">
+                El dominio del fuego hace 1.5 millones de años permitió cocinar proteínas, lo que disparó el crecimiento del cerebro. Desarrollaron herramientas de piedra mucho más complejas llamadas bifaces.
+            </div>
+        </div>
     </section>
 
-    <!-- Sección 3: Homo Habilis -->
-    <section id="habilis">
-        <h2>2. Homo Habilis</h2>
-        <p>Apareció hace 2.4 millones de años. Se le considera el "hombre habilidoso" por ser el primero en fabricar herramientas de piedra tallada para desgarrar carne y romper huesos.</p>
-    </section>
-
-    <!-- Sección 4: Homo Erectus -->
-    <section id="erectus" style="background: #2a2a2a;">
-        <h2>3. Homo Erectus</h2>
-        <p>Surgió hace 1.9 millones de años. Fue el primer homínido en salir de África hacia Asia y Europa. Dominaron el fuego y mejoraron la tecnología de las herramientas, lo que permitió una dieta más variada.</p>
-    </section>
-
-    <!-- Sección 5: Neandertales -->
-    <section id="neanderthal">
-        <h2>4. Homo Neandertal</h2>
-        <p>Habitaron Europa y Asia occidental. Eran robustos, adaptados al frío glacial y poseían una capacidad craneal similar o superior a la nuestra. Enterraban a sus muertos, lo que sugiere pensamiento simbólico.</p>
-    </section>
-
-    <!-- Sección 6: Homo Sapiens -->
-    <section id="sapiens" style="background: #333;">
-        <h2>5. Homo Sapiens Sapiens</h2>
-        <p>Nuestra especie actual. Aparecimos hace unos 300,000 años. Desarrollamos el lenguaje complejo, el arte rupestre y, finalmente, la agricultura, cambiando la faz del planeta para siempre.</p>
-    </section>
-
-    <!-- Sección 7: El Futuro -->
-    <section id="futuro">
-        <h2>6. ¿El fin de la evolución?</h2>
-        <p>Hoy, la tecnología y la ingeniería genética plantean la pregunta: ¿estamos entrando en una fase de evolución artificial o transhumanismo?</p>
+    <!-- ETAPA 3 -->
+    <section>
+        <h2>Neandertal & Sapiens</h2>
+        <img src="https://images.unsplash.com" class="foto-historia" alt="Arte">
+        <p style="max-width: 800px; text-align: center; font-size: 1.3rem;">La cúspide del pensamiento simbólico, el arte rupestre y la conciencia de la muerte.</p>
+        
+        <button class="boton-desplegable">✚ Ver detalles de la revolución cognitiva</button>
+        <div class="contenido-desplegable">
+            <div class="texto-interno">
+                Hace 70.000 años, el Homo Sapiens experimentó una mutación que permitió el lenguaje complejo. Esto nos permitió cooperar en grupos grandes, crear mitos, religiones y eventualmente, la ciencia moderna.
+            </div>
+        </div>
     </section>
 
     <footer>
-        <p>&copy; 2026 - Crónicas de la Evolución - Proyecto Educativo</p>
+        <p>Desarrollado para el proyecto de Antropología 2026</p>
     </footer>
+
+    <!-- SCRIPT PARA QUE FUNCIONEN LOS DESPLEGABLES -->
+    <script>
+        const botones = document.querySelectorAll(".boton-desplegable");
+        
+        botones.forEach(boton => {
+            boton.addEventListener("click", function() {
+                this.classList.toggle("active");
+                const panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                    this.textContent = "✚ Ver más detalles";
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                    this.textContent = "➖ Cerrar detalles";
+                }
+            });
+        });
+    </script>
 
 </body>
 </html>
-
