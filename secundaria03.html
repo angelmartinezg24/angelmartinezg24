@@ -3,146 +3,140 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fundamentos Bioculturales | Evolución</title>
+    <title>Evidencias Fósiles - Antropología</title>
     <style>
-        /* Diseño Minimalista Dark Mode-ready */
+        /* DISEÑO RESPONSIVO BASADO EN PLANTILLA MODERN-ACADEMIC */
         :root {
-            --bg-main: #ffffff;
-            --bg-alt: #f8f9fa;
-            --accent-dark: #2d3436;
-            --highlight: #27ae60;
-            --text-main: #2d3436;
-            --text-muted: #636e72;
+            --primary: #6d4c41;
+            --secondary: #3e2723;
+            --light: #efebe9;
+            --text: #212121;
         }
 
         body {
-            font-family: 'Helvetica Neue', Arial, sans-serif;
-            background-color: var(--bg-alt);
-            color: var(--text-main);
+            font-family: 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
             margin: 0;
-            line-height: 1.8;
+            background-color: var(--light);
+            color: var(--text);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
 
-        .wrapper {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-
+        /* Navegación Responsiva */
         nav {
-            margin-bottom: 50px;
-            font-size: 0.9rem;
+            background: var(--secondary);
+            padding: 1rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
         }
 
         nav a {
-            color: var(--highlight);
+            color: white;
             text-decoration: none;
             font-weight: bold;
-            border: 1px solid var(--highlight);
-            padding: 8px 15px;
-            border-radius: 5px;
+            font-size: 0.9rem;
+            padding: 5px 10px;
+            border: 1px solid rgba(255,255,255,0.3);
+            border-radius: 4px;
         }
 
-        header h1 {
-            font-size: 2.8rem;
-            letter-spacing: -1px;
-            margin-bottom: 10px;
+        nav a:hover {
+            background: var(--primary);
         }
 
-        .abstract {
-            font-size: 1.2rem;
-            color: var(--text-muted);
-            margin-bottom: 40px;
-            border-bottom: 2px solid #eee;
-            padding-bottom: 20px;
-        }
-
-        .grid-info {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
-        }
-
-        .info-box {
-            background: var(--bg-main);
-            padding: 25px;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-        }
-
-        h2 {
-            color: var(--highlight);
-            font-size: 1.4rem;
-            margin-top: 0;
-        }
-
-        ul {
-            padding-left: 20px;
-        }
-
-        li {
-            margin-bottom: 10px;
-        }
-
-        .footer-tag {
-            text-align: center;
-            margin-top: 60px;
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
             padding: 20px;
-            border-top: 1px solid #ddd;
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
+            flex: 1;
         }
 
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        section {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            border-top: 5px solid var(--primary);
+        }
+
+        h2 { color: var(--secondary); }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #d7ccc8;
+            font-size: 0.8rem;
+        }
+
+        .plantilla-link {
+            color: #5d4037;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+
+        /* Ajustes para móviles */
         @media (max-width: 600px) {
-            .grid-info { grid-template-columns: 1fr; }
+            h1 { font-size: 1.5rem; }
+            nav { flex-direction: column; align-items: center; }
         }
     </style>
 </head>
 <body>
 
-<div class="wrapper">
     <nav>
-        <a href="evolucion.html">← Volver a Línea de Tiempo</a>
+        <!-- Prefijo jjj obligatorio en enlaces secundarios -->
+        <a href="index.html">jjj Inicio</a>
+        <a href="evolucion.html">jjj Línea del Tiempo</a>
+        <a href="biologia.html">jjj Adaptaciones Biológicas</a>
+        <a href="yacimientos.html">jjj Grandes Yacimientos</a>
     </nav>
 
-    <header>
-        <h1>Mecanismos de Adaptación</h1>
-        <p class="abstract">Más allá de los fósiles: los motores genéticos y culturales que definieron nuestra supervivencia.</p>
-    </header>
+    <div class="container">
+        <header>
+            <h1>Evidencias de la Evolución: Los Yacimientos</h1>
+            <p>Análisis de los puntos geográficos clave para la reconstrucción de nuestro pasado.</p>
+        </header>
 
-    <main class="grid-info">
-        
-        <section class="info-box">
-            <h2>Adaptaciones Fisiológicas</h2>
-            <ul>
-                <li><strong>Encefalización:</strong> Aumento del tejido neuronal y reestructuración del lóbulo frontal para funciones cognitivas complejas.</li>
-                <li><strong>Termorregulación:</strong> Pérdida del vello corporal y desarrollo de glándulas sudoríparas, clave para la caza de persistencia.</li>
-                <li><strong>Visión Tricromática:</strong> Optimización de la percepción de colores para identificar frutos y recursos en diversos ecosistemas.</li>
-            </ul>
-        </section>
+        <main class="grid">
+            <section>
+                <h2>Garganta de Olduvai (Tanzania)</h2>
+                <p>Conocida como la "Cuna de la Humanidad". Aquí se encontraron restos de <em>Paranthropus boisei</em> y <em>Homo habilis</em>, junto con las herramientas de piedra más antiguas conocidas hasta la fecha.</p>
+            </section>
 
-        <section class="info-box">
-            <h2>Hitos del Comportamiento</h2>
-            <ul>
-                <li><strong>Control del Fuego:</strong> Redujo el gasto energético en la digestión, permitiendo que el cerebro absorbiera más calorías.</li>
-                <li><strong>Pensamiento Simbólico:</strong> Evidenciado en enterramientos rituales y pigmentación corporal hace más de 100,000 años.</li>
-                <li><strong>Cooperación Social:</strong> El desarrollo del "gen del lenguaje" (FOXP2) facilitó la coordinación en grupos grandes.</li>
-            </ul>
-        </section>
+            <section>
+                <h2>Sierra de Atapuerca (España)</h2>
+                <p>El yacimiento más importante de Europa. En la Gran Dolina se identificó al <em>Homo antecessor</em>, y en la Sima de los Huesos se halló la mayor acumulación de fósiles de <em>Homo heidelbergensis</em> del mundo.</p>
+            </section>
 
-        <section class="info-box" style="grid-column: 1 / -1;">
-            <h2>El Legado Genético</h2>
-            <p>La secuenciación del genoma antiguo ha revelado que el <strong>Homo sapiens</strong> moderno porta entre un 1% y un 4% de ADN neandertal (en poblaciones no africanas) y rastros de denisovanos, lo que confirma procesos de hibridación en Eurasia.</p>
-        </section>
+            <section>
+                <h2>Cueva de Denisova (Siberia)</h2>
+                <p>Lugar clave para la genética evolutiva. A partir de un fragmento de hueso de un dedo, se descubrió una especie nueva: los denisovanos, que convivieron con neandertales y sapiens.</p>
+            </section>
+        </main>
+    </div>
 
-    </main>
-
-    <footer class="footer-tag">
-        Módulo de Antropología Biológica - Documentación Técnica
+    <footer>
+        <p>Documentación para Bachillerato de Ciencias. 
+        Este diseño se basa en la <a href="https://www.w3schools.com" class="plantilla-link">plantilla</a> de estructura académica limpia.</p>
     </footer>
-</div>
 
 </body>
 </html>
-
