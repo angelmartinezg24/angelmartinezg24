@@ -1,1 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos Bioculturales | Evolución</title>
+    <style>
+        /* Diseño Minimalista Dark Mode-ready */
+        :root {
+            --bg-main: #ffffff;
+            --bg-alt: #f8f9fa;
+            --accent-dark: #2d3436;
+            --highlight: #27ae60;
+            --text-main: #2d3436;
+            --text-muted: #636e72;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: var(--bg-alt);
+            color: var(--text-main);
+            margin: 0;
+            line-height: 1.8;
+        }
+
+        .wrapper {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        nav {
+            margin-bottom: 50px;
+            font-size: 0.9rem;
+        }
+
+        nav a {
+            color: var(--highlight);
+            text-decoration: none;
+            font-weight: bold;
+            border: 1px solid var(--highlight);
+            padding: 8px 15px;
+            border-radius: 5px;
+        }
+
+        header h1 {
+            font-size: 2.8rem;
+            letter-spacing: -1px;
+            margin-bottom: 10px;
+        }
+
+        .abstract {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            margin-bottom: 40px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 20px;
+        }
+
+        .grid-info {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .info-box {
+            background: var(--bg-main);
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        h2 {
+            color: var(--highlight);
+            font-size: 1.4rem;
+            margin-top: 0;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .footer-tag {
+            text-align: center;
+            margin-top: 60px;
+            padding: 20px;
+            border-top: 1px solid #ddd;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        @media (max-width: 600px) {
+            .grid-info { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="wrapper">
+    <nav>
+        <a href="evolucion.html">← Volver a Línea de Tiempo</a>
+    </nav>
+
+    <header>
+        <h1>Mecanismos de Adaptación</h1>
+        <p class="abstract">Más allá de los fósiles: los motores genéticos y culturales que definieron nuestra supervivencia.</p>
+    </header>
+
+    <main class="grid-info">
+        
+        <section class="info-box">
+            <h2>Adaptaciones Fisiológicas</h2>
+            <ul>
+                <li><strong>Encefalización:</strong> Aumento del tejido neuronal y reestructuración del lóbulo frontal para funciones cognitivas complejas.</li>
+                <li><strong>Termorregulación:</strong> Pérdida del vello corporal y desarrollo de glándulas sudoríparas, clave para la caza de persistencia.</li>
+                <li><strong>Visión Tricromática:</strong> Optimización de la percepción de colores para identificar frutos y recursos en diversos ecosistemas.</li>
+            </ul>
+        </section>
+
+        <section class="info-box">
+            <h2>Hitos del Comportamiento</h2>
+            <ul>
+                <li><strong>Control del Fuego:</strong> Redujo el gasto energético en la digestión, permitiendo que el cerebro absorbiera más calorías.</li>
+                <li><strong>Pensamiento Simbólico:</strong> Evidenciado en enterramientos rituales y pigmentación corporal hace más de 100,000 años.</li>
+                <li><strong>Cooperación Social:</strong> El desarrollo del "gen del lenguaje" (FOXP2) facilitó la coordinación en grupos grandes.</li>
+            </ul>
+        </section>
+
+        <section class="info-box" style="grid-column: 1 / -1;">
+            <h2>El Legado Genético</h2>
+            <p>La secuenciación del genoma antiguo ha revelado que el <strong>Homo sapiens</strong> moderno porta entre un 1% y un 4% de ADN neandertal (en poblaciones no africanas) y rastros de denisovanos, lo que confirma procesos de hibridación en Eurasia.</p>
+        </section>
+
+    </main>
+
+    <footer class="footer-tag">
+        Módulo de Antropología Biológica - Documentación Técnica
+    </footer>
+</div>
+
+</body>
+</html>
 
