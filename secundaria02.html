@@ -1,1 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evolución Humana | Documento Secundario</title>
+    <style>
+        /* ESTILOS CSS */
+        :root {
+            --bg-color: #f0f2f5;
+            --card-bg: #ffffff;
+            --primary-text: #1a1a1a;
+            --accent-color: #3498db;
+            --border-color: #dcdde1;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--primary-text);
+            line-height: 1.7;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        header {
+            border-bottom: 2px solid var(--accent-color);
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: var(--primary-text);
+            margin: 0;
+        }
+
+        .meta-info {
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 5px;
+        }
+
+        .content-section {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            margin-bottom: 25px;
+        }
+
+        h2 {
+            color: var(--accent-color);
+            border-left: 4px solid var(--accent-color);
+            padding-left: 15px;
+            margin-top: 0;
+        }
+
+        .species-grid {
+            display: grid;
+            gap: 20px;
+        }
+
+        .species-card {
+            border: 1px solid var(--border-color);
+            padding: 20px;
+            border-radius: 8px;
+            transition: transform 0.2s;
+        }
+
+        .species-card:hover {
+            border-color: var(--accent-color);
+            background-color: #fafafa;
+        }
+
+        .era {
+            display: inline-block;
+            background: #e1f0fa;
+            color: #2980b9;
+            padding: 2px 10px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            font-size: 0.9rem;
+            color: #888;
+        }
+
+        .nav-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            text-decoration: none;
+            color: var(--accent-color);
+            font-weight: 500;
+        }
+
+        .nav-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <a href="index.html" class="nav-link">← Volver al Índice Principal</a>
+
+    <header>
+        <h1>Análisis de la Evolución Humana</h1>
+        <p class="meta-info">Documento técnico sobre la filogenia de los homínidos.</p>
+    </header>
+
+    <main>
+        <section class="content-section">
+            <h2>Hitos del Proceso de Hominización</h2>
+            <p>La evolución humana no es una línea recta, sino un árbol ramificado donde diversas especies coexistieron. Los cambios clave incluyeron el <strong>bipedismo</strong>, el aumento de la <strong>capacidad craneal</strong> y el desarrollo de herramientas complejas.</p>
+        </section>
+
+        <section class="content-section">
+            <h2>Especies Clave</h2>
+            <div class="species-grid">
+                
+                <article class="species-card">
+                    <span class="era">4.4 Millones de años</span>
+                    <h3>Ardipithecus ramidus</h3>
+                    <p>Habitaba en selvas húmedas. Es uno de los primeros homínidos que muestra evidencias de bipedismo, aunque aún conservaba un dedo oponible en el pie para trepar.</p>
+                </article>
+
+                <article class="species-card">
+                    <span class="era">2.5 - 1.5 Millones de años</span>
+                    <h3>Homo habilis</h3>
+                    <p>Su nombre significa "hombre hábil" debido a su capacidad para crear las primeras herramientas líticas (cultura Olduvayense). Su cerebro era un 30% mayor que el de los Australopithecus.</p>
+                </article>
+
+                <article class="species-card">
+                    <span class="era">800,000 años</span>
+                    <h3>Homo antecessor</h3>
+                    <p>Especie descubierta en Atapuerca, España. Se considera uno de los colonizadores más antiguos de Europa y posee rasgos faciales sorprendentemente modernos.</p>
+                </article>
+
+                <article class="species-card">
+                    <span class="era">230,000 - 40,000 años</span>
+                    <h3>Homo neanderthalensis</h3>
+                    <p>Especie robusta adaptada a climas fríos. Poseían un lenguaje rudimentario, enterraban a sus muertos y tenían una capacidad craneal similar o superior a la nuestra.</p>
+                </article>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Repositorio Académico - Información libre de derechos para fines educativos.</p>
+    </footer>
+</div>
+
+</body>
+</html>
 
