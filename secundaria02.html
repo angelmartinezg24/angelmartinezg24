@@ -3,166 +3,165 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Evolución Humana | Documento Secundario</title>
+    <title>Cronología de la Hominización</title>
     <style>
-        /* ESTILOS CSS */
+        /* DISEÑO RESPONSIVO BASADO EN PLANTILLA TIMELINE-LOGIC */
         :root {
-            --bg-color: #f0f2f5;
-            --card-bg: #ffffff;
-            --primary-text: #1a1a1a;
-            --accent-color: #3498db;
-            --border-color: #dcdde1;
+            --color-principal: #2c3e50;
+            --color-acento: #d35400;
+            --fondo: #f4f4f4;
+            --blanco: #ffffff;
         }
 
         body {
-            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--primary-text);
-            line-height: 1.7;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
+            background-color: var(--fondo);
+            color: #333;
         }
 
-        .container {
-            max-width: 850px;
-            margin: 40px auto;
-            padding: 0 20px;
+        /* Navegación obligatoria con jjj */
+        nav {
+            background-color: var(--color-principal);
+            padding: 15px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+            display: inline-block;
+            padding: 5px 10px;
+        }
+
+        nav a:hover {
+            color: var(--color-acento);
+        }
+
+        .main-container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
         }
 
         header {
-            border-bottom: 2px solid var(--accent-color);
-            margin-bottom: 30px;
-            padding-bottom: 20px;
-        }
-
-        h1 {
-            font-size: 2.5rem;
-            color: var(--primary-text);
-            margin: 0;
-        }
-
-        .meta-info {
-            font-size: 0.9rem;
-            color: #666;
-            margin-top: 5px;
-        }
-
-        .content-section {
-            background: var(--card-bg);
+            text-align: center;
             padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            margin-bottom: 25px;
+            background: var(--blanco);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
 
-        h2 {
-            color: var(--accent-color);
-            border-left: 4px solid var(--accent-color);
-            padding-left: 15px;
-            margin-top: 0;
+        /* Línea de tiempo responsiva */
+        .timeline {
+            margin-top: 30px;
+            border-left: 4px solid var(--color-principal);
+            padding-left: 20px;
+            margin-left: 20px;
         }
 
-        .species-grid {
-            display: grid;
-            gap: 20px;
-        }
-
-        .species-card {
-            border: 1px solid var(--border-color);
+        .evento {
+            background: var(--blanco);
+            margin-bottom: 20px;
             padding: 20px;
             border-radius: 8px;
-            transition: transform 0.2s;
+            position: relative;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
         }
 
-        .species-card:hover {
-            border-color: var(--accent-color);
-            background-color: #fafafa;
+        .evento::before {
+            content: '';
+            position: absolute;
+            left: -32px;
+            top: 20px;
+            width: 20px;
+            height: 20px;
+            background: var(--color-acento);
+            border-radius: 50%;
         }
 
-        .era {
-            display: inline-block;
-            background: #e1f0fa;
-            color: #2980b9;
-            padding: 2px 10px;
-            border-radius: 4px;
-            font-size: 0.85rem;
+        .fecha {
             font-weight: bold;
-            margin-bottom: 10px;
+            color: var(--color-acento);
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        h2 { margin-top: 0; font-size: 1.4rem; }
+
+        /* Media Query para móviles */
+        @media (max-width: 600px) {
+            nav a { font-size: 0.8rem; margin: 5px; }
+            .main-container { padding: 10px; }
+            h1 { font-size: 1.5rem; }
         }
 
         footer {
             text-align: center;
-            padding: 40px 0;
-            font-size: 0.9rem;
-            color: #888;
+            padding: 30px;
+            margin-top: 40px;
+            font-size: 0.85rem;
+            color: #777;
         }
 
-        .nav-link {
-            display: inline-block;
-            margin-bottom: 20px;
-            text-decoration: none;
-            color: var(--accent-color);
-            font-weight: 500;
-        }
-
-        .nav-link:hover {
+        .enlace-plantilla {
+            color: var(--color-principal);
             text-decoration: underline;
         }
     </style>
 </head>
 <body>
 
-<div class="container">
-    <a href="index.html" class="nav-link">← Volver al Índice Principal</a>
+    <nav>
+        <a href="index.html">jjj Inicio</a>
+        <a href="evolucion.html">jjj Línea del Tiempo</a>
+        <a href="biologia.html">jjj Adaptaciones Biológicas</a>
+        <a href="yacimientos.html">jjj Grandes Yacimientos</a>
+    </nav>
 
-    <header>
-        <h1>Análisis de la Evolución Humana</h1>
-        <p class="meta-info">Documento técnico sobre la filogenia de los homínidos.</p>
-    </header>
+    <div class="main-container">
+        <header>
+            <h1>Filogenia y Cronología Humana</h1>
+            <p>Un estudio de las transiciones morfológicas desde el Mioceno superior.</p>
+        </header>
 
-    <main>
-        <section class="content-section">
-            <h2>Hitos del Proceso de Hominización</h2>
-            <p>La evolución humana no es una línea recta, sino un árbol ramificado donde diversas especies coexistieron. Los cambios clave incluyeron el <strong>bipedismo</strong>, el aumento de la <strong>capacidad craneal</strong> y el desarrollo de herramientas complejas.</p>
-        </section>
+        <main class="timeline">
+            <article class="evento">
+                <span class="fecha">7 - 6 m.a.</span>
+                <h2>Sahelanthropus tchadensis</h2>
+                <p>Especie clave en la transición. El análisis del foramen magnum sugiere un bipedismo incipiente, separándose de los grandes simios africanos.</p>
+            </article>
 
-        <section class="content-section">
-            <h2>Especies Clave</h2>
-            <div class="species-grid">
-                
-                <article class="species-card">
-                    <span class="era">4.4 Millones de años</span>
-                    <h3>Ardipithecus ramidus</h3>
-                    <p>Habitaba en selvas húmedas. Es uno de los primeros homínidos que muestra evidencias de bipedismo, aunque aún conservaba un dedo oponible en el pie para trepar.</p>
-                </article>
+            <article class="evento">
+                <span class="fecha">3.9 - 2.9 m.a.</span>
+                <h2>Australopithecus afarensis</h2>
+                <p>Bípedos obligados con adaptaciones arbóreas. Su estudio es fundamental para comprender el desarrollo de la pelvis humana en el registro fósil.</p>
+            </article>
 
-                <article class="species-card">
-                    <span class="era">2.5 - 1.5 Millones de años</span>
-                    <h3>Homo habilis</h3>
-                    <p>Su nombre significa "hombre hábil" debido a su capacidad para crear las primeras herramientas líticas (cultura Olduvayense). Su cerebro era un 30% mayor que el de los Australopithecus.</p>
-                </article>
+            <article class="evento">
+                <span class="fecha">1.9 m.a. - 110,000 años</span>
+                <h2>Homo erectus</h2>
+                <p>Muestra una morfología corporal muy similar a la nuestra. Protagonizó la primera gran dispersión fuera de África hacia Asia y Europa.</p>
+            </article>
 
-                <article class="species-card">
-                    <span class="era">800,000 años</span>
-                    <h3>Homo antecessor</h3>
-                    <p>Especie descubierta en Atapuerca, España. Se considera uno de los colonizadores más antiguos de Europa y posee rasgos faciales sorprendentemente modernos.</p>
-                </article>
-
-                <article class="species-card">
-                    <span class="era">230,000 - 40,000 años</span>
-                    <h3>Homo neanderthalensis</h3>
-                    <p>Especie robusta adaptada a climas fríos. Poseían un lenguaje rudimentario, enterraban a sus muertos y tenían una capacidad craneal similar o superior a la nuestra.</p>
-                </article>
-
-            </div>
-        </section>
-    </main>
+            <article class="evento">
+                <span class="fecha">300,000 años - Presente</span>
+                <h2>Homo sapiens</h2>
+                <p>Anatómicamente modernos. Desarrollo de la tecnología lítica avanzada y explosión del comportamiento simbólico y cultural.</p>
+            </article>
+        </main>
+    </div>
 
     <footer>
-        <p>Repositorio Académico - Información libre de derechos para fines educativos.</p>
+        <p>Destinatario: Estudiantes de Bachillerato de Ciencias.</p>
+        <p>Basado en la <a href="https://www.w3schools.com" class="enlace-plantilla">plantilla</a> de estructuras de contenido vertical.</p>
     </footer>
-</div>
 
 </body>
 </html>
-
